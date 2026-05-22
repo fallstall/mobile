@@ -5,9 +5,11 @@
 
 .home-shell {
   position: relative;
-  width: 414px;
+  width: 100%;
+  max-width: 414px;
   min-height: 896px;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
   background-color: #fa4a0c;
 }
 
@@ -171,10 +173,11 @@
 .cont-home {
     position: relative;
     z-index: 2;
-    width: 414px;
-    height: 896px;
+    width: 100%;
+    min-height: 896px;
     background-color: #F2F2F2;
     padding-top: 50px;
+    padding-bottom: 36px;
     margin: 0;
     transform-origin: right center;
     transition: transform 0.45s ease, border-radius 0.45s ease, box-shadow 0.45s ease;
@@ -378,4 +381,3 @@
   box-shadow: -18px 16px 0 rgba(255, 255, 255, 0.18);
   transform: translateX(230px) scale(0.88);
 }
-
