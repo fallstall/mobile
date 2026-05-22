@@ -1,0 +1,381 @@
+
+*{
+    margin: 0% auto;
+}
+
+.home-shell {
+  position: relative;
+  width: 414px;
+  min-height: 896px;
+  overflow: hidden;
+  background-color: #fa4a0c;
+}
+
+.home-drawer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 265px;
+  padding: 111px 0 0 30px;
+  margin: 0;
+  background-color: #fa4a0c;
+  color: #fff;
+}
+
+.home-drawer__link {
+  position: relative;
+  display: block;
+  width: 174px;
+  margin: 0 0 33px 0;
+  padding: 0 0 26px 36px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.home-drawer__link::before,
+.home-drawer__link::after,
+.home-drawer__signout span,
+.home-drawer__signout span::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.home-drawer__link::before {
+  left: 0;
+  top: -4px;
+  width: 19px;
+  height: 19px;
+}
+
+.home-drawer__link--profile::before {
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.home-drawer__link--profile::after {
+  left: 5px;
+  top: 0;
+  width: 9px;
+  height: 9px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 10px 0 -2px #fa4a0c, 0 10px 0 0 #fff;
+}
+
+.home-drawer__link--orders::before {
+  top: -2px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: skewX(-13deg);
+}
+
+.home-drawer__link--orders::after {
+  left: 4px;
+  top: 11px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 9px 0 0 #fff, 3px -16px 0 -1px #fff;
+}
+
+.home-drawer__link--promo::before {
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  transform: rotate(45deg);
+}
+
+.home-drawer__link--promo::after {
+  left: 4px;
+  top: 4px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.home-drawer__link--privacy::before {
+  top: -2px;
+  width: 18px;
+  height: 17px;
+  border: 2px solid #fff;
+  border-radius: 2px;
+}
+
+.home-drawer__link--privacy::after {
+  left: 5px;
+  top: 3px;
+  width: 8px;
+  height: 2px;
+  background-color: #fff;
+  box-shadow: 0 5px 0 #fff;
+}
+
+.home-drawer__link--security::before {
+  top: -4px;
+  width: 18px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-top: 0;
+  border-radius: 0 0 9px 9px;
+}
+
+.home-drawer__link--security::after {
+  left: 0;
+  top: -4px;
+  width: 18px;
+  height: 10px;
+  border-radius: 50% 50% 0 0;
+  background-color: #fff;
+}
+
+.home-drawer__signout {
+  position: absolute;
+  left: 31px;
+  bottom: 70px;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.home-drawer__signout span {
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.home-drawer__signout span::before {
+  right: 0;
+  top: -4px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+}
+
+.cont-home {
+    position: relative;
+    z-index: 2;
+    width: 414px;
+    height: 896px;
+    background-color: #F2F2F2;
+    padding-top: 50px;
+    margin: 0;
+    transform-origin: right center;
+    transition: transform 0.45s ease, border-radius 0.45s ease, box-shadow 0.45s ease;
+
+    .menu-home {
+      
+      width: 318px;
+      height: 24px;
+      display: flex;
+      gap: 250px;
+    }
+
+    .home-menu-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+
+      img {
+        display: block;
+      }
+    }
+
+    .text-center {
+      font-size: 34px;
+      font-weight: 600;
+      padding-top: 43px;
+      padding-left: 50px;
+      padding-bottom: 28px;
+    }
+    .search-cont {
+      background-color: #EFEEEE;
+      width: 314px;
+      height: 60px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+     
+      
+
+      img {
+
+        width: 18px;
+        height: 18px;
+        padding-right: 120px;
+      }
+      a {
+        transform: translateX(-160px);
+        text-decoration: none;
+        color: #878787;
+      }
+    }
+
+    
+.scrollable-tape-menu {
+  display: flex;
+  align-items: center;
+  width: 414px;
+  height: 52px;
+  margin-bottom: 8px;
+  padding: 0;
+  font-size: 18px;
+  overflow-x: auto;
+  overflow-y: visible; 
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrollable-tape-menu::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+.tape-item-menu {
+  flex: 0 0 auto;
+  color: #a3a3a3;
+  font-size: 17px;
+  height: 100%;
+  overflow: visible; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  padding: 0 40px 10px;
+  border-bottom: 3px solid #F2F2F2;
+  transition: border-color 0.3s ease-in-out;
+
+    p {
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    &:hover {
+      color: #FA4A0C;
+      border-color: #FA4A0C;
+    }
+}
+.see-more {
+        text-decoration: none;
+        color: #FA4A0C;  
+        padding-left: 300px;
+        
+}
+
+
+
+
+
+
+/* Контейнер ленты */
+.scrollable-tape {
+  transform: translateY(20px);
+  display: flex;
+  overflow-x: auto; /* Включаем горизонтальную прокрутку */
+  overflow-y: hidden; /* Скрываем вертикальную прокрутку */
+  white-space: nowrap; /* Запрещаем перенос элементов на новую строку */
+  padding: 20px 0; /* Отступы сверху/снизу */
+  -webkit-overflow-scrolling: touch; /* Плавная прокрутка на мобильных */
+}
+
+/* Скрываем полосу прокрутки (для разных браузеров) */
+.scrollable-tape::-webkit-scrollbar {
+  display: none; /* Для Chrome, Safari, Edge */
+}
+.scrollable-tape {
+  -ms-overflow-style: none; /* Для Internet Explorer, Edge */
+  scrollbar-width: none; /* Для Firefox */
+}
+
+/* Стили для карточек */
+.tape-item {
+  flex: 0 0 auto; /* Элемент не сжимается и не растягивается */
+  width: 220px; /* Ширина карточки */
+  height: 270px; /* Высота карточки */
+  margin-right: 20px; /* Отступ справа между карточками */
+  border-radius: 30px; /* Закругление углов */
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1); /* Тень */
+   /* Обрезаем содержимое, выходящее за границы */
+  background-color: white;
+  display: flex;
+  flex-direction: column; /* Располагаем элементы карточки вертикально */
+  align-items: center; /* Центрируем по горизонтали */
+  justify-content: center; /* Центрируем по вертикали */
+
+
+/* Стили для изображения */
+ img {
+  
+  padding-bottom: 30px;
+  width: 100%; /* Заполняем ширину карточки */
+  height: auto; /* Сохраняем пропорции */
+  
+   /* Обрезаем изображение, если не помещается */
+}
+
+/* Стили для названия блюда */
+  h3 {
+  transform: translateY(-60px);
+  font-size: 22px;
+  font-weight: 800;
+  color: #333;
+  text-align: center;
+}
+
+/* Стили для цены */
+  .price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e74c3c;
+  transform: translateY(-40px);
+}
+
+}
+
+.bottom {
+  padding-top: 90px;
+  width: 312px;
+  height: 31px;
+  display: flex;
+  flex-direction: row;
+  gap: 68px;
+
+.bottom a {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+}
+}
+
+.home-shell.is-menu-open .cont-home {
+  border-radius: 30px 0 0 30px;
+  box-shadow: -18px 16px 0 rgba(255, 255, 255, 0.18);
+  transform: translateX(230px) scale(0.88);
+}
+

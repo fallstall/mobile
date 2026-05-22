@@ -1,0 +1,30 @@
+*{
+    margin: 0% auto;
+    
+}
+.content-cont {
+    margin-top: 230px;
+    width: 314px;
+    height: 582px;
+    display: flex;
+    flex-direction: column;
+
+    img {
+        padding-right: 15px;
+    }
+
+    h2 {
+        margin-top: 31px;
+        font-size: 28px;
+        margin-bottom: 13px;
+        font-weight: 600;
+    }
+
+    p{
+        font-size: 17px;
+        text-align: center;
+        font-weight: 300;
+        margin-bottom: 240px;
+        color: rgb(104, 104, 104);
+    }
+}

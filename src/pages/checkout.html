@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <title>Checkout</title>
+</head>
+<body>
+  <main class="checkout">
+    <header class="checkout__top">
+      <a href="profile.html" class="checkout__back" aria-label="Back"></a>
+      <h1>Checkout</h1>
+    </header>
+
+    <section class="checkout__content">
+      <h2>Delivery</h2>
+
+      <div class="checkout__row">
+        <h3>Address details</h3>
+        <a href="#" class="checkout__change">change</a>
+      </div>
+
+      <article class="checkout__address">
+        <p class="checkout__name">Marvis Kparobo</p>
+        <p class="checkout__street">Km 5 refinery road opposite re<br>public road, effurun, delta state</p>
+        <p class="checkout__phone">+234 9011039271</p>
+      </article>
+
+      <h3 class="checkout__label">Delivery method.</h3>
+
+      <form class="checkout__methods">
+        <label class="checkout__method">
+          <input type="radio" name="delivery" checked>
+          <span></span>
+          Door delivery
+        </label>
+        <label class="checkout__method">
+          <input type="radio" name="delivery">
+          <span></span>
+          Pick up
+        </label>
+      </form>
+
+      <div class="checkout__total">
+        <span>Total</span>
+        <strong>23,000</strong>
+      </div>
+
+      <div class="checkout__button">
+        @@include('./_button.html', {
+          "href": "payment.html",
+          "title": "Proceed to payment",
+          "classModifier": "button--gray"
+        })
+      </div>
+    </section>
+  </main>
+</body>
+</html>

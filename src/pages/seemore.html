@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    
+    <title>seemore</title>
+</head>
+<body>
+
+<main class="seemore">
+    <section class="product">
+        <header class="product__top">
+            <a class="product__icon" href="home.html" aria-label="Back">
+                <span></span>
+            </a>
+            <a class="product__icon product__icon--heart" href="#" aria-label="Favorites">
+                <span></span>
+            </a>
+        </header>
+
+        <div class="product__slider" aria-label="Product image slider">
+            <div class="product__hero">
+                <img src="./assets/images/product-tomato.webp" alt="Veggie tomato mix">
+            </div>
+
+            <div class="product__dots">
+                <span class="product__dot product__dot--active"></span>
+                <span class="product__dot"></span>
+                <span class="product__dot"></span>
+                <span class="product__dot"></span>
+            </div>
+        </div>
+
+        <div class="product__intro">
+            <h1>Veggie tomato mix</h1>
+            <p>N1,900</p>
+        </div>
+
+        <div class="product__info">
+            <article class="product__section">
+                <h2>Delivery info</h2>
+                <p>Delivered between monday aug and thursday 20 from 8pm to 91:32 pm</p>
+            </article>
+
+            <article class="product__section">
+                <h2>Return policy</h2>
+                <p>All our foods are double checked before leaving our stores so by any case you found a broken food please contact our hotline immediately.</p>
+            </article>
+        </div>
+        <div class="product__button">
+
+        
+            @@include('./_button.html', {
+                "href": "home.html",
+                "title": "Add to cart",
+                "classModifier": "button--gray"
+                })
+                </div>
+    </section>
+</main>
+
+</body>
+</html>

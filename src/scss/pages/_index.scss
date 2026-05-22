@@ -1,0 +1,65 @@
+*{
+    margin: 0% auto;
+
+}
+
+.container {
+    width: 414px;
+    height: 896px;
+    position: relative;
+    overflow: hidden;
+    background-color: #FF4B3A;
+
+.top {
+    padding-top: 60px;
+    width: 277px;
+    height: 195px;
+   
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-evenly;
+    
+
+
+    .round-vith-img {
+        background-color: rgb(255, 255, 255);
+        width: 73px;
+        height: 73px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(-100px);
+        
+    }
+    .text-center {
+        width: 275px;
+        height: 112px;
+        font-size: 65px;
+        color: rgb(255, 255, 255);
+        font-weight: 800;
+        line-height: 88.8%;
+        letter-spacing: 0;
+        
+        
+    }
+}
+.people {
+    padding-top: 60px;
+}
+.red-block {
+    height: 120px;
+    width: 414px;
+    transform: translateY(-150px);
+}
+.btn {
+    position: absolute;
+    left: 50px;
+    bottom: 43px;
+    width: 314px;
+    height: 70px;
+    margin: 0;
+}
+
+}

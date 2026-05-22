@@ -1,0 +1,112 @@
+*{
+    margin: 0% auto;
+}
+
+.login-container {
+    width: 414px;
+    height: 896px;
+    background-color: #F2F2F2;
+
+    .first-block {
+        position: relative;
+        width: 414px;
+        height: 382px;
+        background-color: #ffffff;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        box-shadow: 0 6px 9px rgba(0, 0, 0, 0.1);
+
+        .menu-container {
+            position: absolute;
+            left: 47px;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 320px;
+            height: 70px;
+            font-size: 18px;
+
+            .menu {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 130px;
+                height: 70px;
+                padding: 0;
+                border-bottom: 3px solid #ffffff;
+                transition: border-color 0.3s ease-in-out;
+
+                &:first-child {
+                    border-color: #FA4A0C;
+                }
+
+                &:hover {
+                    border-color: #FA4A0C;
+                }
+            }
+        }
+        
+        .pict {
+            width: 150px;
+            height: 162px;
+            padding-top: 90px;
+            padding-bottom: 81px;
+
+        }
+    }
+}
+        .floating-form {
+            
+            padding-top: 20px;
+            border-radius: 15px;
+            width: 304px;
+            height: 218px;
+            padding-right: 40px;
+        }
+
+        .floating-form .input-group {
+            position: relative;
+            margin: 2rem 0;
+        }
+
+        .floating-form input {
+            width: 100%;
+            padding: 20px;
+            border: none;
+            
+            border-bottom: 2px solid #444;
+            background: transparent;
+            color: rgb(87, 73, 73);
+            outline: none;
+        }
+
+        .floating-form label {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+            transition: 0.3s;
+            pointer-events: none;
+        }
+
+        .floating-form input:focus ~ label,
+        .floating-form input:valid ~ label {
+            top: -10px;
+            font-size: 0.8rem;
+            color: #FA4A0C;
+        }
+
+        .floating-form input:focus {
+            border-bottom-color: #FA4A0C;
+        }
+.password-fogot {
+    font-size: 17px;
+    padding-left: 35px;
+    color: #FA4A0C;
+}
+.butn {
+    display: flex;
+    padding-top: 120px;
+}

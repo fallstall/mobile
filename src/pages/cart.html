@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <title>Cart</title>
+</head>
+<body>
+  <main class="cart-page">
+    <header class="cart-page__top">
+      <a href="orders.html" class="cart-page__back" aria-label="Back"></a>
+      <h1>Cart</h1>
+    </header>
+
+    <p class="cart-page__hint">
+      <img src="./assets/icons/swipe-finger.svg" alt="">
+      swipe on an item to delete
+    </p>
+
+    <section class="cart-page__list" aria-label="Cart items">
+      <article class="cart-item is-swiped">
+        <div class="cart-item__surface">
+          <img src="./assets/images/product-tomato.webp" alt="Veggie tomato mix">
+          <div class="cart-item__info">
+            <h2>Veggie tomato mix</h2>
+            <p>#1,900</p>
+          </div>
+          <div class="cart-item__stepper">
+            <button type="button" aria-label="Decrease">-</button>
+            <span>1</span>
+            <button type="button" aria-label="Increase">+</button>
+          </div>
+        </div>
+        <div class="cart-item__actions">
+          <button class="cart-item__favorite" type="button" aria-label="Favorite">
+            <img src="./assets/icons/favorite-heart.svg" alt="">
+          </button>
+          <button class="cart-item__delete" type="button" aria-label="Delete"></button>
+        </div>
+      </article>
+
+      <article class="cart-item">
+        <div class="cart-item__surface">
+          <img src="./assets/images/first.webp" alt="Fishwith mix orange">
+          <div class="cart-item__info">
+            <h2>Fishwith mix orange....</h2>
+            <p>#1,900</p>
+          </div>
+          <div class="cart-item__stepper">
+            <button type="button" aria-label="Decrease">-</button>
+            <span>1</span>
+            <button type="button" aria-label="Increase">+</button>
+          </div>
+        </div>
+        <div class="cart-item__actions">
+          <button class="cart-item__favorite" type="button" aria-label="Favorite">
+            <img src="./assets/icons/favorite-heart.svg" alt="">
+          </button>
+          <button class="cart-item__delete" type="button" aria-label="Delete"></button>
+        </div>
+      </article>
+
+      <article class="cart-item">
+        <div class="cart-item__surface">
+          <img src="./assets/images/product-tomato.webp" alt="Veggie tomato mix">
+          <div class="cart-item__info">
+            <h2>Veggie tomato mix</h2>
+            <p>#1,900</p>
+          </div>
+          <div class="cart-item__stepper">
+            <button type="button" aria-label="Decrease">-</button>
+            <span>1</span>
+            <button type="button" aria-label="Increase">+</button>
+          </div>
+        </div>
+        <div class="cart-item__actions">
+          <button class="cart-item__favorite" type="button" aria-label="Favorite">
+            <img src="./assets/icons/favorite-heart.svg" alt="">
+          </button>
+          <button class="cart-item__delete" type="button" aria-label="Delete"></button>
+        </div>
+      </article>
+    </section>
+
+    <div class="cart-page__button">
+      @@include('./_button.html', {
+        "href": "checkout.html",
+        "title": "Complete order",
+        "classModifier": "button--gray"
+      })
+    </div>
+  </main>
+  <script>
+    const cartItems = document.querySelectorAll('.cart-item');
+
+    cartItems.forEach((item) => {
+      const surface = item.querySelector('.cart-item__surface');
+      let startX = 0;
+      let currentX = 0;
+      let isDragging = false;
+
+      const closeOthers = () => {
+        cartItems.forEach((otherItem) => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('is-swiped');
+          }
+        });
+      };
+
+      surface.addEventListener('pointerdown', (event) => {
+        startX = event.clientX;
+        currentX = event.clientX;
+        isDragging = true;
+        surface.setPointerCapture(event.pointerId);
+      });
+
+      surface.addEventListener('pointermove', (event) => {
+        if (!isDragging) return;
+        currentX = event.clientX;
+      });
+
+      surface.addEventListener('pointerup', () => {
+        if (!isDragging) return;
+        isDragging = false;
+
+        if (startX - currentX > 35) {
+          closeOthers();
+          item.classList.add('is-swiped');
+          return;
+        }
+
+        if (currentX - startX > 25) {
+          item.classList.remove('is-swiped');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <title>Payment</title>
+</head>
+<body>
+  <main class="payment-page">
+    <header class="payment-page__top">
+      <a href="checkout.html" class="payment-page__back" aria-label="Back"></a>
+      <h1>Checkout</h1>
+    </header>
+
+    <section class="payment-page__content">
+      <h2>Payment</h2>
+
+      <h3 class="payment-page__label">Payment method</h3>
+
+      <form class="payment-page__card">
+        <label class="payment-page__option payment-page__option--card">
+          <input type="radio" name="payment" checked>
+          <span class="payment-page__radio"></span>
+          <span class="payment-page__icon">
+            <img src="./assets/images/card.webp" alt="">
+          </span>
+          <span class="payment-page__text">Card</span>
+        </label>
+
+        <label class="payment-page__option payment-page__option--bank">
+          <input type="radio" name="payment">
+          <span class="payment-page__radio"></span>
+          <span class="payment-page__icon">
+            <img src="./assets/images/bank.webp" alt="">
+          </span>
+          <span class="payment-page__text">Bank account</span>
+        </label>
+      </form>
+
+      <h3 class="payment-page__label payment-page__label--delivery">Delivery method.</h3>
+
+      <form class="payment-page__delivery">
+        <label class="payment-page__delivery-option">
+          <input type="radio" name="delivery" checked>
+          <span></span>
+          Door delivery
+        </label>
+        <label class="payment-page__delivery-option">
+          <input type="radio" name="delivery">
+          <span></span>
+          Pick up
+        </label>
+      </form>
+
+      <div class="payment-page__total">
+        <span>Total</span>
+        <strong>23,000</strong>
+      </div>
+
+      <div class="payment-page__button js-payment-open">
+        @@include('./_button.html', {
+          "href": "#",
+          "title": "Proceed to payment",
+          "classModifier": "button--gray"
+        })
+      </div>
+    </section>
+
+    <div class="payment-modal" aria-hidden="true">
+      <div class="payment-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="paymentNoteTitle">
+        <h2 id="paymentNoteTitle">Please note</h2>
+        <div class="payment-modal__body">
+          <div class="payment-modal__price">
+            <span>DELIVERY TO MAINLAND</span>
+            <p>N1000 - N2000</p>
+          </div>
+          <div class="payment-modal__price">
+            <span>DELIVERY TO ISLAND</span>
+            <p>N2000 - N3000</p>
+          </div>
+        </div>
+        <div class="payment-modal__actions">
+          <button class="payment-modal__cancel" type="button">Cancel</button>
+          <button class="payment-modal__proceed" type="button">Proceed</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script>
+    const paymentModal = document.querySelector('.payment-modal');
+    const paymentOpen = document.querySelector('.js-payment-open a');
+    const paymentCancel = document.querySelector('.payment-modal__cancel');
+
+    paymentOpen.addEventListener('click', (event) => {
+      event.preventDefault();
+      paymentModal.classList.add('is-open');
+      paymentModal.setAttribute('aria-hidden', 'false');
+    });
+
+    paymentCancel.addEventListener('click', () => {
+      paymentModal.classList.remove('is-open');
+      paymentModal.setAttribute('aria-hidden', 'true');
+    });
+
+    document.querySelector('.payment-modal__proceed').addEventListener('click', () => {
+      window.location.href = 'no-internet.html';
+    });
+  </script>
+</body>
+</html>
